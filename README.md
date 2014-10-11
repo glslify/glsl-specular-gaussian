@@ -30,7 +30,7 @@ void main() {
 Install with npm:
 
 ```
-npm install glsl-specular-phong
+npm install glsl-specular-gaussian
 ```
 
 Then use with [glslify](https://github.com/stackgl/glslify).
@@ -38,16 +38,16 @@ Then use with [glslify](https://github.com/stackgl/glslify).
 # API
 
 ```glsl
-#pragma glslify: phong = require(glsl-specular-phong)
+#pragma glslify: gaussSpec = require(glsl-specular-gaussian)
 ```
 
-##### `float phong(vec3 lightDir, vec3 eyeDir, vec3 normal, float shininess)`
-Computes the specular power in the Phong lighting model.
+##### `float gaussSpec(vec3 lightDir, vec3 eyeDir, vec3 normal, float shininess)`
+Computes the specular power in the Gaussian model
 
 * `lightDir` is a *unit length* `vec3` pointing from the surface point toward the light
 * `eyeDir` is a *unit length* `vec3` pointing from the surface point toward the camera
 * `normal` is the surface normal at the sample point
-* `shininess` is the exponent in the Phong equation
+* `shininess` is the size of the specular hight light.  Smaller values give a sharper spot, while larger values give a more spread out highlight
 
 **Returns** A `float` representing the specular power
 
