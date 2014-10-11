@@ -1,0 +1,39 @@
+{
+  "name": "glsl-specular-gaussian",
+  "version": "1.0.0",
+  "description": "Gaussian specular model for GLSL",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "beefy example/example.js --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stackgl/glsl-specular-gaussian.git"
+  },
+  "keywords": [
+    "gaussian",
+    "specular",
+    "highlight",
+    "model",
+    "lighting",
+    "glsl",
+    "glslify"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stackgl/glsl-specular-gaussian/issues"
+  },
+  "homepage": "https://github.com/stackgl/glsl-specular-gaussian",
+  "devDependencies": {
+    "a-big-triangle": "^1.0.0",
+    "glslify": "^1.6.0",
+    "beefy": "^2.1.1"
+  },
+  "browserify": {
+    "transform": "glslify"
+  }
+}
